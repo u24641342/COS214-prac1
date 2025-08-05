@@ -2,6 +2,7 @@
 #define CANVAS_H
 
 #include "Shape.h"
+#include "Memento.h"
 #include <iostream>
 #include <vector>
 #include <map>
@@ -13,6 +14,6 @@ class Canvas {
     public:
         Memento* captureCurrent();
         void undoAction(Memento* prev);
-}
+};
 
 #endif
