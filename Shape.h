@@ -12,5 +12,19 @@ class Shape {
     public: 
         virtual Shape* clone() = 0;
 };
+class Rectangle : public Shape {
+        public:
+            Shape* clone();
+    };
+
+class Square : public Shape {
+        public:
+            Shape* clone();
+    };
+
+class Textbox : public Shape {
+        public:
+            Shape* clone();
+    };
 
 #endif
