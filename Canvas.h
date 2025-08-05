@@ -2,6 +2,7 @@
 #define CANVAS_H
 
 #include "Shape.h"
+#include <iostream>
 
 class Canvas {
     private:
