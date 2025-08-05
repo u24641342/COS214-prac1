@@ -5,7 +5,8 @@
 
 class ShapeFactory {
     protected:
-        Shape* createShape(); 
+        virtual Shape* createShape() = 0;
+        virtual void toString() = 0;
 };
 
 #endif
