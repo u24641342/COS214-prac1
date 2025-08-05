@@ -1,0 +1,4 @@
+#ifndef RECTANGLEFACTORY_H
+#define RECTANGLEFACTORY_H
+
+#endif
