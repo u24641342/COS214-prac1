@@ -3,6 +3,9 @@
 
 #include "Shape.h"
 #include <iostream>
+#include <vector>
+#include <map>
+#include <fstream>
 
 class Canvas {
     private:
