@@ -11,20 +11,25 @@ class Shape {
         int position_Y;
     public: 
         virtual Shape* clone() = 0;
+        virtual ~Shape();
 };
-class Rectangle : public Shape {
-        public:
-            Shape* clone();
-    };
 
 class Square : public Shape {
         public:
-            Shape* clone();
+            Square();
+            Shape* clone() override;
+    };
+
+class Rectangle : public Shape {
+        public:
+            Rectangle();
+            Shape* clone() override;
     };
 
 class Textbox : public Shape {
         public:
-            Shape* clone();
+            Textbox();
+            Shape* clone() override;
     };
 
 #endif
