@@ -2,34 +2,42 @@
 #define SHAPE_H
 #include <string>
 using namespace std;
+
+// Abstract Product
 class Shape {
-    private:
+    protected:
         int length;
         int width;
         string colour;
         int position_X;
         int position_Y;
     public: 
-        virtual Shape* clone() = 0;
+        virtual Shape* clone() const = 0;
         virtual ~Shape();
 };
 
+// Concrete Products
 class Square : public Shape {
         public:
-            Square();
-            Shape* clone() override;
+            Square(int length = 0, string colour = "white", int posX = 0, int posY = 0);
+            Square(const Square& other); // Copy constructor
+            Shape* clone() const override;
     };
 
 class Rectangle : public Shape {
         public:
-            Rectangle();
-            Shape* clone() override;
+            Rectangle(int length = 0, int width = 0, string colour = "white", int posX = 0, int posY = 0);
+            Rectangle(const Rectangle& other); // Copy constructor
+            Shape* clone() const override;
     };
 
 class Textbox : public Shape {
+        private:
+            string text;
         public:
-            Textbox();
-            Shape* clone() override;
+            Textbox(int length = 0, int width = 0, string colour = "white", int posX = 0, int posY = 0, string text = "");
+            Textbox(const Textbox& other); // Copy constructor
+            Shape* clone() const override;
     };
 
 #endif
