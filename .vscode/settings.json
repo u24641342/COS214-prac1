@@ -4,6 +4,8 @@
     "*.page-template": "vue",
     "*.layout-template": "vue",
     "*.vue": "vue",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "format": "cpp",
+    "iostream": "cpp"
   }
 }
