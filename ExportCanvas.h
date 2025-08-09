@@ -19,18 +19,12 @@ class ExportCanvas {
 
 class PNGExporter : public ExportCanvas {
     public:
-        void saveToFile() const override {
-            std::cout << "Saving canvas as PNG file." << std::endl;
-            // Implementation for saving as PNG
-        }
+        void saveToFile() const override;
 };
 
 class PDFExporter : public ExportCanvas {
     public:
-        void saveToFile() const override {
-            std::cout << "Saving canvas as PDF file." << std::endl;
-            // Implementation for saving as PDF
-        }
+        void saveToFile() const override;
 };
 
 #endif

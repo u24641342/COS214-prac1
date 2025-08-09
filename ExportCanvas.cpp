@@ -18,6 +18,17 @@ void ExportCanvas::renderElements() const {
     std::cout << "Rendering elements on the canvas." << std::endl;
 }
 
+void PNGExporter::saveToFile() const {
+    std::cout << "Saving canvas as PNG file." << std::endl;
+    // Implementation for saving as PNG
+}
+
+void PDFExporter::saveToFile() const {
+    std::cout << "Saving canvas as PDF file." << std::endl;
+    // Implementation for saving as PDF
+}
+
+
 ExportCanvas::~ExportCanvas() {
     // Destructor implementation
     std::cout << "ExportCanvas destructor called." << std::endl;
