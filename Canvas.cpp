@@ -36,20 +36,5 @@
 
     void Canvas :: clearCanvas() 
     {
-        for (Shape* shape : shapes) {
-            switch (shape) {
-                case Square*:
-                    delete shape;
-                    break;
-                case Rectangle*:
-                    delete shape;
-                    break;
-                case Textbox*:
-                    delete shape;
-                    break;
-                default:
-                    std::cout << "Unknown shape type." << std::endl;
-            }
-        }
-        shapes.clear();
+        // shapes.clear();
     }
