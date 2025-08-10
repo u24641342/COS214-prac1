@@ -36,9 +36,12 @@ int main()
     // Undo the last action
     canvas.undoAction(memento);
     // Clean up
-    delete square;
-    delete rectangle;   
-    delete textbox;
+    delete square1;
+    delete rectangle1;   
+    delete textbox1;
+    delete square2;
+    delete rectangle2;   
+    delete textbox2;
     memento->deleteMemento();
     delete memento;
     std::cout << "Testing completed successfully." << std::endl;

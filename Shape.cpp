@@ -1,5 +1,23 @@
 #include "Shape.h"
 
+Shape::~Shape() 
+{
+    delete shape;
+    // Destructor implementation
+}
+
+Rectangle::~Rectangle() 
+{
+    
+}
+Square::~Square() 
+{
+
+}
+Textbox::~Textbox() 
+{
+    
+}
 
 Rectangle::Rectangle(int length, int width, string colour, int posX, int posY) : Shape(length, width, colour, posX, posY) {}
 
