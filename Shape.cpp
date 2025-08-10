@@ -1,32 +1,13 @@
 #include "Shape.h"
 
 
-Rectangle::Rectangle(int length, int width, string colour, int posX, int posY) {
-    this->length = length;
-    this->width = width;
-    this->colour = colour;
-    this->position_X = posX;
-    this->position_Y = posY;
+Rectangle::Rectangle(int length, int width, string colour, int posX, int posY) : Shape(length, width, colour, posX, posY) {}
+
+Square::Square(int length, string colour, int posX, int posY) : Shape(length, length, colour, posX, posY) {
+    this->width = length;
 }
 
-Square::Square(int length, string colour, int posX, int posY) {
-    this->length = length;
-    this->width = length; // Square has equal length and width
-    this->colour = colour;
-    this->position_X = posX;
-    this->position_Y = posY;
-
-}
-
-Textbox::Textbox(int length, int width, string colour, int posX, int posY, string text) {
-    this->length = length;
-    this->width = width;
-    this->colour = colour;
-    this->position_X = posX;
-    this->position_Y = posY;
-    this->text = text;
-    
-}
+Textbox::Textbox(int length, int width, string colour, int posX, int posY, string text) : Shape(length, width, colour, posX, posY), text(text) {}
 
 Square::Square(const Square& other) : Shape(other) {
     // Copy constructor

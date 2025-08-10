@@ -12,6 +12,8 @@ class Shape {
         int position_X;
         int position_Y;
     public: 
+        Shape(int length = 0, int width = 0, string colour = "white", int posX = 0, int posY = 0)
+            : length(length), width(width), colour(colour), position_X(posX), position_Y(posY) {}
         virtual Shape* clone() const = 0;
         virtual ~Shape();
 };

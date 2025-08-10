@@ -1,8 +1,5 @@
 #include "Canvas.h"
 
-class Canvas {
-    Shape* shapes;
-
     Canvas :: Canvas()
     {
         //shapes = new Shape();
@@ -11,7 +8,15 @@ class Canvas {
         //but shape is an abstract class. so what do we do?
     } 
 
-    Memento* captureCurrent()
+    void Canvas::addShape(Shape* shape)
+    {
+        if (shape != nullptr) {
+            shapes.push_back(shape);
+        } else {
+            std::cerr << "Cannot add a null shape." << std::endl;
+        }
+    }
+    Memento* Canvas::captureCurrent()
     {
         return new Memento(shapes);
     }
@@ -20,4 +25,3 @@ class Canvas {
     {
         shapes = prev->getMemento();
     }
-}

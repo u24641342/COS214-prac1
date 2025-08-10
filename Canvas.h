@@ -10,14 +10,15 @@
 
 class Canvas {
     public:
-        Canvas() : shapes(nullptr) {};
+        vector<Shape*> shapes;
+        Canvas();
         ~Canvas();
+        void addShape(Shape* shape);
         void clearCanvas();
         Canvas* exportCanvas(Canvas* exportedCanvas);
         Memento* captureCurrent();
         void undoAction(Memento*);
     private:
-        Shape* shapes;
 };
 
 #endif
