@@ -2,10 +2,10 @@
 
 void Caretaker::addMemento(Memento* memento) {
     if (memento != NULL) {
-        mementos.push_back(memento);
+        savedMementos.push_back(memento);
     }
 }
 
 Memento* Caretaker::getMemento() const {
-    
+    return savedMementos.empty() ? NULL : savedMementos.back();
 }

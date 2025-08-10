@@ -10,7 +10,7 @@ class Caretaker {
         Memento* getMemento() const;
 
     private:
-        list<Memento*> mementos;
+        list<Memento*> savedMementos;
 };
 
 #endif
