@@ -1,6 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 #include <string>
+#include <iostream>
 using namespace std;
 
 // Abstract Product
@@ -16,6 +17,7 @@ class Shape {
             : length(length), width(width), colour(colour), position_X(posX), position_Y(posY) {}
         virtual Shape* clone() const = 0;
         virtual ~Shape() = 0;
+        virtual void toString() const = 0;
 };
 
 class Square : public Shape {
@@ -24,6 +26,7 @@ class Square : public Shape {
             Square(const Square& other);
             Shape* clone() const override;
             ~Square() override;
+            void toString() const override;
     };
 
 class Rectangle : public Shape {
@@ -32,6 +35,7 @@ class Rectangle : public Shape {
             Rectangle(const Rectangle& other);
             Shape* clone() const override;
             ~Rectangle() override;
+            void toString() const override;
     };
 
 class Textbox : public Shape {
@@ -42,6 +46,7 @@ class Textbox : public Shape {
             Textbox(const Textbox& other);
             Shape* clone() const override;
             ~Textbox() override;
+            void toString() const override;
     };
 
 #endif

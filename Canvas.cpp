@@ -42,3 +42,13 @@
         }
         shapes.clear();
     }
+
+    void Canvas::toString()
+    {
+        std::cout << "Canvas contains the following shapes:" << std::endl;
+        for (const auto& shape : shapes) {
+            if (shape != nullptr) {
+                shape->toString(); // Assuming Shape has a toString() method
+            }
+        }
+    }

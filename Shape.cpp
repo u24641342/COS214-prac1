@@ -50,6 +50,20 @@ Textbox::Textbox(const Textbox& other) : Shape(other) {
     this->text = other.text;
 }
 
+void Rectangle::toString() const {
+    std::cout << "Rectangle: Length = " << length << ", Width = " << width 
+              << ", Colour = " << colour << ", Position = (" << position_X 
+              << ", " << position_Y << ")" << std::endl;
+}
+void Square::toString() const {
+    std::cout << "Square: Length = " << length << ", Colour = " << colour 
+              << ", Position = (" << position_X << ", " << position_Y << ")" << std::endl;
+}
+void Textbox::toString() const {
+    std::cout << "Textbox: Length = " << length << ", Width = " << width 
+              << ", Colour = " << colour << ", Position = (" << position_X 
+              << ", " << position_Y << "), Text = \"" << text << "\"" << std::endl;
+}
 Shape* Square::clone() const{
     return new Square(*this);
 };

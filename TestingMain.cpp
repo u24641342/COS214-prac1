@@ -3,6 +3,7 @@
 #include "Shape.h"
 #include "ShapeFactory.h"
 #include "ExportCanvas.h"
+#include "Caretaker.h"
 // #include "Memento.h"
 
 int main()
@@ -21,13 +22,24 @@ int main()
     Shape* rectangle2 = rectangle1->clone();
     Shape* textbox2 = textbox1->clone();
     canvas.addShape(square1);
-    canvas.addShape(rectangle1);
-    canvas.addShape(textbox1);
+    //canvas.addShape(rectangle1);
+    //canvas.addShape(textbox1);
+    
+    // Capture the current state of the canvas
+    Caretaker caretaker;
+    Memento* memento = canvas.captureCurrent();
+    
+    
     canvas.addShape(square2);
     canvas.addShape(rectangle2);
     canvas.addShape(textbox2);
-    // Capture the current state of the canvas
-    Memento* memento = canvas.captureCurrent();
+    cout << "Initial canvas state:" << std::endl;
+    canvas.toString();
+    caretaker.addMemento(memento);
+    canvas.undoAction(caretaker.getMemento());
+    std::cout << "Canvas state after undo:" << std::endl;
+    canvas.toString();
+
     // Export the canvas to a file
     PNGExporter pngExporter(&canvas);
     PDFExporter pdfExporter(&canvas);
@@ -41,9 +53,9 @@ int main()
     delete square1;
     delete rectangle1;   
     delete textbox1;
-    // delete square2;
-    // delete rectangle2;   
-    // delete textbox2;
+    delete square2;
+    delete rectangle2;   
+    delete textbox2;
     // memento->deleteMemento();
     // delete memento;
     std::cout << "Testing completed successfully." << std::endl;
