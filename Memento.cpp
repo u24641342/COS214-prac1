@@ -1,6 +1,5 @@
 #include "Memento.h"
 
-
     Memento::Memento(vector<Shape*> elements)
     {
         for (Shape* shape : elements) {
