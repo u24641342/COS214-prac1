@@ -6,6 +6,10 @@
         shapes = elements;
     };
 
+    vector<Shape*> Memento::getMemento() {
+        return shapes;
+    };
+
     /* void deleteMemento() 
     {
         delete shapes;
