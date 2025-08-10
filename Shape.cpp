@@ -2,8 +2,8 @@
 
 Shape::~Shape() 
 {
-    delete shape;
-    // Destructor implementation
+    // delete shape;
+    // Destructor implementation pls help mulondaiw
 }
 
 Rectangle::~Rectangle() 
