@@ -7,9 +7,8 @@
 class Memento {
 
     public:
-
         Memento(vector<Shape*> elements);
-        vector<Shape*> getMemento() {return shapes;};
+        vector<Shape*> getMemento();
         void deleteMemento();
     private:
         vector<Shape*> shapes;

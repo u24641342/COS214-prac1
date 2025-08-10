@@ -10,7 +10,6 @@ Square::Square(int length, string colour, int posX, int posY) : Shape(length, le
 Textbox::Textbox(int length, int width, string colour, int posX, int posY, string text) : Shape(length, width, colour, posX, posY), text(text) {}
 
 Square::Square(const Square& other) : Shape(other) {
-    // Copy constructor
     this->length = other.length;
     this->width = other.width;
     this->colour = other.colour;
@@ -18,7 +17,6 @@ Square::Square(const Square& other) : Shape(other) {
     this->position_Y = other.position_Y;
 }
 Rectangle::Rectangle(const Rectangle& other) : Shape(other) {
-    // Copy constructor
     this->length = other.length;
     this->width = other.width;
     this->colour = other.colour;
@@ -26,7 +24,6 @@ Rectangle::Rectangle(const Rectangle& other) : Shape(other) {
     this->position_Y = other.position_Y;
 }
 Textbox::Textbox(const Textbox& other) : Shape(other) {
-    // Copy constructor
     this->length = other.length;
     this->width = other.width;
     this->colour = other.colour;

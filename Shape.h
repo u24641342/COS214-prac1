@@ -18,18 +18,17 @@ class Shape {
         virtual ~Shape();
 };
 
-// Concrete Products
 class Square : public Shape {
         public:
             Square(int length = 0, string colour = "white", int posX = 0, int posY = 0);
-            Square(const Square& other); // Copy constructor
+            Square(const Square& other);
             Shape* clone() const override;
     };
 
 class Rectangle : public Shape {
         public:
             Rectangle(int length = 0, int width = 0, string colour = "white", int posX = 0, int posY = 0);
-            Rectangle(const Rectangle& other); // Copy constructor
+            Rectangle(const Rectangle& other);
             Shape* clone() const override;
     };
 
@@ -38,7 +37,7 @@ class Textbox : public Shape {
             string text;
         public:
             Textbox(int length = 0, int width = 0, string colour = "white", int posX = 0, int posY = 0, string text = "");
-            Textbox(const Textbox& other); // Copy constructor
+            Textbox(const Textbox& other);
             Shape* clone() const override;
     };
 
