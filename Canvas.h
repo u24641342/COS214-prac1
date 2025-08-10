@@ -9,11 +9,15 @@
 #include <fstream>
 
 class Canvas {
+    public:
+        Canvas() : shapes(nullptr) {};
+        ~Canvas();
+        void clearCanvas();
+        Canvas* exportCanvas(Canvas* exportedCanvas);
+        Memento* captureCurrent();
+        void undoAction(Memento*);
     private:
         Shape* shapes;
-    public:
-        Memento* captureCurrent();
-        void undoAction(Memento* prev);
 };
 
 #endif

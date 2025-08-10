@@ -5,15 +5,13 @@
 
 class Memento {
 
-private:
-    // The state of the object to be saved
-    Shape* shapes;
+    public:
+        Memento(Shape* elements);
+        Shape* getMemento() {return shapes;};
+        void deleteMemento();
+    private:
+        Shape* shapes;
 
-public:
-    // Constructor
-    Memento(Shape* elements);
-    Shape getMemento();
-    void deleteMemento();
 };
 
 #endif

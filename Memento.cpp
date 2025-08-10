@@ -6,12 +6,7 @@ class Memento {
 public:
     Memento(Shape* elements)
     {
-        
-    };
-
-    Shape getMemento() 
-    {
-        return *shapes;
+        shapes = elements;
     };
 
     void deleteMemento() 
