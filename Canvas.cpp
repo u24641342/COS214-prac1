@@ -16,7 +16,7 @@
     void Canvas::addShape(Shape* shape)
     {
         if (shape != nullptr) {
-            shapes.push_back(shape);    
+            shapes.push_back(shape->clone());    
         } 
         else 
         {

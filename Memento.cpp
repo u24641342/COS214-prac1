@@ -3,7 +3,11 @@
 
     Memento::Memento(vector<Shape*> elements)
     {
-        shapes = elements;
+        for (Shape* shape : elements) {
+            if (shape != nullptr) {
+                shapes.push_back(shape->clone());
+            }
+        }
     };
 
     vector<Shape*> Memento::getMemento() {
