@@ -1,7 +1,7 @@
 
-filesToDelete = TestingMain Canvas Shape ShapeFactory ExportCanvas
-filesToCompile = TestingMain.cpp Canvas.cpp Shape.cpp ShapeFactory.cpp ExportCanvas.cpp
-filesInCoverageReport = TestingMain Canvas Shape ShapeFactory ExportCanvas
+filesToDelete = TestingMain Canvas Shape ShapeFactory ExportCanvas Memento Caretaker
+filesToCompile = TestingMain.cpp Canvas.cpp Shape.cpp ShapeFactory.cpp ExportCanvas.cpp Memento.cpp Caretaker.cpp
+filesInCoverageReport = TestingMain Canvas Shape ShapeFactory ExportCanvas Memento Caretaker
 
 main:
 	g++ -g -std=c++11 ${filesToCompile} -o TestingMain

@@ -23,6 +23,7 @@
             std::cout << "Canvas.cpp addShape shape is nullptr." << std::endl;
         }
     }
+
     Memento* Canvas::captureCurrent()
     {
         return new Memento(shapes);
@@ -36,5 +37,8 @@
 
     void Canvas :: clearCanvas() 
     {
-        // shapes.clear();
+        for (Shape* shape : shapes) {
+        delete shape;
+        }
+        shapes.clear();
     }

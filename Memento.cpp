@@ -9,8 +9,14 @@
         }
     };
 
-    vector<Shape*> Memento::getMemento() {
-        return shapes;
+    vector<Shape*> Memento::getMemento() const{
+        vector<Shape*> copy;
+        for (Shape* shape : shapes) {
+            if (shape != nullptr) {
+                copy.push_back(shape->clone());
+            }
+        }
+        return copy;
     };
 
     Memento::~Memento() {
