@@ -1,6 +1,5 @@
 #include "ExportCanvas.h"
 
-
 void ExportCanvas::exportToFile() const {
     // Implementation for exporting the canvas to a file
     prepareCanvas();
@@ -24,8 +23,6 @@ void PDFExporter::saveToFile() const {
     std::cout << "Saving canvas as PDF file." << std::endl;
 }
 
-
 ExportCanvas::~ExportCanvas() {
     std::cout << "ExportCanvas destructor called." << std::endl;
 }
-
