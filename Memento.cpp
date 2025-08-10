@@ -10,8 +10,9 @@
         return shapes;
     };
 
-    /* void deleteMemento() 
-    {
-        delete shapes;
-        shapes = nullptr;
-    };*/
+    Memento::~Memento() {
+        for (Shape* shape : shapes) {
+            delete shape;
+        }
+        shapes.clear();
+    }

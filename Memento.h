@@ -9,7 +9,7 @@ class Memento {
     public:
         Memento(vector<Shape*> elements);
         vector<Shape*> getMemento();
-        void deleteMemento();
+        ~Memento();
     private:
         vector<Shape*> shapes;
 
