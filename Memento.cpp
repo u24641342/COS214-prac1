@@ -6,7 +6,7 @@
         shapes = elements;
     };
 
-    Memento::getMemento() {
+    vector<Shape*> Memento::getMemento() {
         return shapes;
     };
 
