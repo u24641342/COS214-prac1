@@ -1,13 +1,4 @@
 #include "Canvas.h"
-
-    Canvas :: Canvas()
-    {
-        // std::vector<Shape*> shapes = new std::vector<Shape*>();
-        //should we ask Keegan or someone how to do the memento with the shapes?
-        //atm im using an example where they use the code above to initialize the shapes array.
-        //but shape is an abstract class. so what do we do?
-    } 
-
     Canvas :: ~Canvas()
     {
         clearCanvas();
@@ -43,12 +34,12 @@
         shapes.clear();
     }
 
-    void Canvas::toString()
+    void Canvas::print()
     {
         std::cout << "Canvas contains the following shapes:" << std::endl;
         for (const auto& shape : shapes) {
             if (shape != nullptr) {
-                shape->toString(); // Assuming Shape has a toString() method
+                shape->print();
             }
         }
     }

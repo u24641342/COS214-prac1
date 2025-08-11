@@ -34,11 +34,11 @@ int main()
     canvas.addShape(rectangle2);
     canvas.addShape(textbox2);
     cout << "Initial canvas state:" << std::endl;
-    canvas.toString();
+    canvas.print();
     caretaker.addMemento(memento);
     canvas.undoAction(caretaker.getMemento());
     std::cout << "Canvas state after undo:" << std::endl;
-    canvas.toString();
+    canvas.print();
 
     // Export the canvas to a file
     PNGExporter pngExporter(&canvas);

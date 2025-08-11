@@ -1,31 +1,29 @@
 #include "Shape.h"
 
-Shape::~Shape() 
-{
-    // delete shape;
-    // Destructor implementation pls help mulondaiw
+Rectangle::Rectangle(int length, int width, string colour, int posX, int posY) {
+    this->length = length;
+    this->width = width;
+    this->colour = colour;
+    this->position_X = posX;
+    this->position_Y = posY;
 }
 
-Rectangle::~Rectangle() 
-{
-    
-}
-Square::~Square() 
-{
-
-}
-Textbox::~Textbox() 
-{
-    
-}
-
-Rectangle::Rectangle(int length, int width, string colour, int posX, int posY) : Shape(length, width, colour, posX, posY) {}
-
-Square::Square(int length, string colour, int posX, int posY) : Shape(length, length, colour, posX, posY) {
+Square::Square(int length, string colour, int posX, int posY) {
+    this->length = length;
     this->width = length;
+    this->colour = colour;
+    this->position_X = posX;
+    this->position_Y = posY;
 }
 
-Textbox::Textbox(int length, int width, string colour, int posX, int posY, string text) : Shape(length, width, colour, posX, posY), text(text) {}
+Textbox::Textbox(int length, int width, string colour, int posX, int posY, string text) {
+    this->length = length;
+    this->width = width;
+    this->colour = colour;
+    this->position_X = posX;
+    this->position_Y = posY;
+    this->text = text;
+}
 
 Square::Square(const Square& other) : Shape(other) {
     this->length = other.length;
@@ -50,20 +48,21 @@ Textbox::Textbox(const Textbox& other) : Shape(other) {
     this->text = other.text;
 }
 
-void Rectangle::toString() const {
+void Rectangle::print() const {
     std::cout << "Rectangle: Length = " << length << ", Width = " << width 
               << ", Colour = " << colour << ", Position = (" << position_X 
               << ", " << position_Y << ")" << std::endl;
 }
-void Square::toString() const {
+void Square::print() const {
     std::cout << "Square: Length = " << length << ", Colour = " << colour 
               << ", Position = (" << position_X << ", " << position_Y << ")" << std::endl;
 }
-void Textbox::toString() const {
+void Textbox::print() const {
     std::cout << "Textbox: Length = " << length << ", Width = " << width 
               << ", Colour = " << colour << ", Position = (" << position_X 
               << ", " << position_Y << "), Text = \"" << text << "\"" << std::endl;
 }
+
 Shape* Square::clone() const{
     return new Square(*this);
 };

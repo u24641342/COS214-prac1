@@ -7,12 +7,12 @@
 class Memento {
 
     public:
-        Memento(vector<Shape*> elements);
         vector<Shape*> getMemento() const;
         ~Memento();
     private:
+    friend class Canvas;
         vector<Shape*> shapes;
-
+        Memento(vector<Shape*> elements);
 };
 
 #endif

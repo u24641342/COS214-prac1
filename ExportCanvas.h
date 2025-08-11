@@ -8,7 +8,6 @@ class ExportCanvas {
         ExportCanvas(Canvas* canvas) : canvas(canvas) {}
         ~ExportCanvas();
         void exportToFile();
-        
     protected:
         Canvas* canvas;
     private:
