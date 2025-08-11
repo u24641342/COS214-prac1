@@ -56,8 +56,7 @@ int main()
     delete square2;
     delete rectangle2;   
     delete textbox2;
-    // memento->deleteMemento();
-    // delete memento;
+    delete memento;
     std::cout << "Testing completed successfully." << std::endl;
 
     return 0;

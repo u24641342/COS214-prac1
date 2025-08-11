@@ -1,0 +1,21 @@
+Square Factory: Creates a Square shape.
+Rectangle Factory: Creates a Rectangle shape.
+Textbox Factory: Creates a Textbox shape.
+Initial canvas state:
+Canvas contains the following shapes:
+Square: Length = 5, Colour = blue, Position = (10, 10)
+Square: Length = 5, Colour = blue, Position = (10, 10)
+Rectangle: Length = 10, Width = 5, Colour = red, Position = (20, 20)
+Textbox: Length = 15, Width = 10, Colour = green, Position = (30, 30), Text = "Hello World"
+Canvas state after undo:
+Canvas contains the following shapes:
+Square: Length = 5, Colour = blue, Position = (10, 10)
+Prepping Canvas for PNG export.
+Rendering elements for PNG export.
+Saving canvas as PNG file.
+Prepping Canvas for PDF export.
+Rendering elements for PDF export.
+Saving canvas as PDF file.
+Testing completed successfully.
+ExportCanvas destructor called.
+ExportCanvas destructor called.
